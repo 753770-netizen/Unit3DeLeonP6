@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip crashSound;
     private AudioSource playerAudio;
+    public bool doubleJumpUsed = false;
+    public float doubleJumpForce;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +35,15 @@ public class PlayerController : MonoBehaviour
             isOnGround = false;
             playerAnim.SetTrigger("Jump_trig");
             dirtParticle.Stop();
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
+
+            doubleJumpUsed = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.Space)&& !isOnGround && !doubleJumpUsed)
+        {
+            doubleJumpUsed = true;
+            playerRb.AddForce(Vector3.up * doubleJumpForce, ForceMode.Impulse);
+            playerAnim.Play("Running_Jump", 3, 0f);
             playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
     }

@@ -299,10 +299,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9032654670626560620, guid: f8abbdd178867d2419ba9feb6ff2cba0, type: 3}
-      propertyPath: doubleJumpForce
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -712,11 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
   obstaclePrefab: {fileID: 8000987878645954461, guid: 81bde35bcf18a594d83dc4fa5c45d421, type: 3}
-  obstaclePrefabs:
-  - {fileID: 8000987878645954461, guid: 81bde35bcf18a594d83dc4fa5c45d421, type: 3}
-  - {fileID: 1707653480754222286, guid: 0442684467490af4e92e80ccd8159d79, type: 3}
-  - {fileID: 3677107136518966824, guid: 58e8d5db73c8616498cdaa5be75f64a5, type: 3}
-  - {fileID: 4328264188246335534, guid: 3d1683af113c1b94196dc050936bfd10, type: 3}
+  obstaclePrefabs: []
 --- !u!4 &1316629004
 Transform:
   m_ObjectHideFlags: 0
@@ -726,7 +718,7 @@ Transform:
   m_GameObject: {fileID: 1316629002}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.13, y: 0, z: 0.88509}
+  m_LocalPosition: {x: 8.45508, y: 0, z: 0.88509}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
